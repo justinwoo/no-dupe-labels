@@ -1,0 +1,11 @@
+{
+  "name": "no-dupe-labels",
+  "set": "030818",
+  "source": "https://github.com/justinwoo/spacchetti.git",
+  "depends": [
+    "console",
+    "effect",
+    "prelude",
+    "typelevel-prelude"
+  ]
+}

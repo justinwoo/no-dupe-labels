@@ -15,6 +15,7 @@ instance noDuplicateRowsNil :: NoDuplicateFields RL.Nil row
 instance noDuplicateRowsCons ::
   ( Row.Cons name ty row' row
   , Row.Lacks name row'
+  , NoDuplicateFields tail row
   ) => NoDuplicateFields (RL.Cons name ty tail) row
 
 checkNoDuplicateFields :: forall proxy row rl. RL.RowToList row rl => NoDuplicateFields rl row => proxy row -> Unit
